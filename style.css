@@ -6,18 +6,31 @@
   --cor-neutro: #f4f4f4;
 }
 
+/* Reset e cobertura total para html e body */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* Reset básico */
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 /* Fundo e tipografia */
 body {
   font-family: "Roboto", sans-serif;
-  background: var(--cor-neutro) url("imagens/Gragas_4.jpg") no-repeat
-    center/cover;
+
+  /* fundo separado para melhor responsividade */
+  background-color: var(--cor-neutro);
+  background-image: url("imagens/Gragas_4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
   color: var(--cor-secundaria);
   width: 100vw;
   height: 100vh;
