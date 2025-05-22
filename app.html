@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pega Grongos</title>
+    <script src="jogo.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onresize="ajustaTamanhoPalcoJogo()">
+    <div class="painel">
+      <div class="vidas">
+        <img id="v1" src="imagens/coracao_cheio.png" alt="" />
+        <img id="v2" src="imagens/coracao_cheio.png " alt="" />
+        <img id="v3" src="imagens/coracao_cheio.png" alt="" />
+      </div>
+      <div class="cronometro">
+        Tempo Restante: <span id="cronometro"></span>
+      </div>
+    </div>
+
+    <audio id="bg-music" src="imagens/NãovouNegar.mpeg" autoplay loop></audio>
+    <script>
+      document.getElementById("cronometro").innerHTML = tempo;
+
+      var criarMosca = setInterval(function () {
+        posicaoRandomica();
+      }, criarMoscaTempo);
+    </script>
+  </body>
+</html>

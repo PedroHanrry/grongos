@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --cor-principal: #2a9d8f;
+  --cor-secundaria: #264653;
+  --cor-neutro: #f4f4f4;
+}
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fundo e tipografia */
+body {
+  font-family: "Roboto", sans-serif;
+  background: var(--cor-neutro) url("imagens/Gragas_4.jpg") no-repeat
+    center/cover;
+  color: var(--cor-secundaria);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Painel de HUD (cronômetro + corações) */
+.painel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-top: 1px solid #fff;
+}
+
+/* Vida (ícones de coração) */
+.painel .vidas {
+  display: flex;
+  gap: 0.5rem;
+}
+.painel .vidas img {
+  width: 40px;
+  height: auto;
+}
+
+/* Cronômetro */
+#cronometro {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* “Moscas” (barril) */
+.mosca1,
+.mosca2,
+.mosca3 {
+  position: absolute;
+  cursor: inherit; /* herda o cursor definido em html/body */
+  padding: 10px;
+  margin: -10px;
+}
+.mosca1 {
+  width: 50px;
+  height: 50px;
+}
+.mosca2 {
+  width: 70px;
+  height: 70px;
+}
+.mosca3 {
+  width: 90px;
+  height: 90px;
+}
+
+/* Orientação da mosca */
+.ladoA {
+  transform: scaleX(1);
+}
+.ladoB {
+  transform: scaleX(-1);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  #cronometro {
+    font-size: 1.2rem;
+  }
+  .mosca1 {
+    width: 80px !important;
+    height: 80px !important;
+    padding: 8px;
+    margin: -8px;
+  }
+  .mosca2 {
+    width: 65px !important;
+    height: 65px !important;
+    padding: 8px;
+    margin: -8px;
+  }
+  .mosca3 {
+    width: 55px !important;
+    height: 55px !important;
+    padding: 8px;
+    margin: -8px;
+  }
+}
+
+/* Logo do jogo */
+.grongos {
+  width: 500px;
+  height: 500px;
+}
+
+/* Barreira invisível */
+.over {
+  width: 500px;
+  height: 500px;
+  border: none;
+}
